@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block title %}Users{% endblock %}
+{% block body %}
+<div class="container mt-5 shadow-lg p-3 mb-5 bg-white rounded">
+	<div class="alert alert-secondary">
+
+	
+		<table width="600px" align="center" class="table table-borderless">
+			<tr>
+				<th colspan="2" style="font-size: 20px;color: black;">Users:</th>
+				<th colspan="4" style="text-align: right;"><a href="/add_user" class="btn btn-outline-success">Add user <i class="fas fa-user-plus"></i></a></th>
+			</tr>
+			{% if users|length > 0 %}
+			<tr class="headings">
+				<th>Id</th>
+				<th>Name <i class="fas fa-user-friends"></i></i></th>
+				<th>Email <i class="fas fa-envelope-open-text"></i></th>
+				<th>Phone <i class="fa fa-phone"></i></th>
+				<th colspan="2">Edit &amp; Delete</th>
+			</tr>
+				{% for el in users %}
+				<tr class="elements">
+					<td>{{ el.id }}</td>
+					<td>{{ el.name }}</td>
+					<td>{{ el.email }}</td>
+					<td>{{ el.phone }}</td>
+					<td><a href="/{{ el.id }}/edit" class="btn btn-warning">Edit <i class="fa fa-edit"></i></a></td>
+					<td><a href="/{{ el.id }}/del" class="btn btn-danger" style="color: black;">Remove <i class="fas fa-trash-alt"></i></a></td>
+				</tr>
+				{% endfor %}
+			{% else %}
+			<tr>
+				<th>We don't have users yet</th>
+			</tr>
+			{% endif %}
+		</table>
+	</div>
+        
+    
+	
+</div>    
+    
+{% endblock %}

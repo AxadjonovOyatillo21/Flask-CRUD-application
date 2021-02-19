@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block title %}Add User {% endblock %}
+
+{% block body %}
+<div class="container mt-5 text-center">
+	<h1>Add User</h1>
+	<form method="post">
+		<input type="text" name="name" id="name" class="form-control" placeholder="Name" value="{{ users.name }}" style="width: 400px; margin: 0 auto;"><br>
+		<input type="email" name="email" id="email" class="form-control" placeholder="Email Address" value="{{ users.email }}" style="width: 400px;margin: 0 auto;"><br>
+		<input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone" value="{{ users.phone }}" style="width: 400px;margin: 0 auto;"><br>
+		<input type="submit" class="btn btn-primary mb-3" value="Send">
+	</form>
+</div>
+
+{% endblock %}
