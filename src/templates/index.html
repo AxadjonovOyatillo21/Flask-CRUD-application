@@ -2,14 +2,11 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome-free-5.15.1-web/css/all.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
         <style>
-            .container {
-                width: 900px;
-            }
             .headings {
                 color: white;
                 background-color: black;
@@ -26,18 +23,20 @@
         </style>
     </head>
     <body>
+        <div class="container">
         <div class="p-3 px-md-4 mb-3 bg-white border-bottom" style="box-shadow: 0 .6025rem .25rem rgba(0,0,0,.075)!important;">
             <p class="h2 text-center">Flask CRUD application</p>
         </div>
         
         {% block body %}{% endblock %}
-        <footer style="text-align: center;display: flex;justify-content: center;align-items: center;flex-direction: column;position: absolute;bottom: 0;left: 200px;right: 200px;" class="footer">
-            <div class="icons">
-                <i class="fab fa-github-alt bottom"></i>
-                <i class="fab fa-telegram bottom"></i>
-                <i class="fab fa-linkedin bottom"></i><br>
-            </div>
-            <p style="font-weight: bold;">&copy2020 By Oyatillo Axadjonov</p>
-        </footer>
+            <footer class="footer mt-auto py-4 p-1">
+                <div class="icons">
+                    <i class="fab fa-github-alt bottom"></i>
+                    <i class="fab fa-telegram bottom"></i>
+                    <i class="fab fa-linkedin bottom"></i><br>
+                </div>
+                <p style="font-weight: bold;">&copy2020 By Oyatillo Axadjonov</p>
+            </footer>
+        </div>
     </body>
 </html>
