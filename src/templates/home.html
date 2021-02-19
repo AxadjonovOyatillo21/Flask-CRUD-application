@@ -6,16 +6,16 @@
 <div class="alert alert-secondary">
 	<table class="table table-borderless">
 		<tr>
-			<th colspan="2" style="font-size: 20px;color: black;">Users:</th>
+			<th colspan="2" style="font-size: 1.5rem;color: black;">Users:</th>
 			<th colspan="4" style="text-align: right;"><a href="/add_user" class="btn btn-outline-success">Add user <i class="fas fa-user-plus"></i></a></th>
 		</tr>
 		{% if users|length > 0 %}
 		<tr class="headings">
-			<th>Id</th>
-			<th>Name <i class="fas fa-user-friends"></i></i></th>
-			<th>Email <i class="fas fa-envelope-open-text"></i></th>
-			<th>Phone <i class="fa fa-phone"></i></th>
-			<th colspan="2">Edit &amp; Delete</th>
+			<th class="col">Id</th>
+			<th class="col">Name <i class="fas fa-user-friends"></i></i></th>
+			<th class="col">Email <i class="fas fa-envelope-open-text"></i></th>
+			<th class="col">Phone <i class="fa fa-phone"></i></th>
+			<th colspan="2" class="col">Edit &amp; Delete</th>
 		</tr>
 			{% for el in users %}
 			<tr class="elements">
@@ -29,7 +29,7 @@
 			{% endfor %}
 		{% else %}
 		<tr>
-			<th>We don't have users yet</th>
+			<th class="col">We don't have users yet</th>
 		</tr>
 		{% endif %}
 	</table>
